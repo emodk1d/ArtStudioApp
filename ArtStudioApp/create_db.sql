@@ -21,7 +21,9 @@ CREATE TABLE table_personal_files
     id           INTEGER PRIMARY KEY AUTOINCREMENT,
     performer_id INTEGER NOT NULL UNIQUE,
     passport_id  INTEGER NOT NULL UNIQUE,
-    full_name    TEXT    NOT NULL,
+    first_name   TEXT    NOT NULL,
+    last_name    TEXT    NOT NULL,
+    second_name  TEXT    NULL,
     address      TEXT    NOT NULL,
     FOREIGN KEY (performer_id) REFERENCES table_performers (id),
     FOREIGN KEY (passport_id) REFERENCES table_passport (id)
