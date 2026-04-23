@@ -1,3 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System;
+using ArtStudioApp;
 
-Console.WriteLine("Hello, World!");
+var path = @"C:\Users\COLLEGE\RiderProjects\ArtStudio\database.db";
+var db = new DbContext($"Data Source={path};");
+
+db.DisplayAllProjectsInfo();
